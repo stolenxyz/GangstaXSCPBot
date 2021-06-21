@@ -20,8 +20,9 @@ jobs:
         
     - name: Restore dependencies
       run: dotnet restore
+      
     - name: Restore NuGet dependencies
-    - uses: actions/cache@v2
+      uses: actions/cache@v2
       with:
         path: ~/.nuget/packages
         # Look to see if there is a cache hit for the corresponding requirements file
