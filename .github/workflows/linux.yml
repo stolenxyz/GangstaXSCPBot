@@ -17,9 +17,21 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
+        
     - name: Restore dependencies
       run: dotnet restore
+      
+    - name: Restore NuGet dependencies
+      uses: actions/cache@v2
+      with:
+        path: ~/.nuget/packages
+        # Look to see if there is a cache hit for the corresponding requirements file
+        key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
+        restore-keys: |
+         ${{ runner.os }}-nuget
+      
     - name: Build for Linux
       run: dotnet publish -c release -r ubuntu.21.04-x64 --self-contained
+      
     - name: Test
       run: dotnet test --no-build --verbosity normal
