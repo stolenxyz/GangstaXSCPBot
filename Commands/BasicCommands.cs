@@ -65,7 +65,7 @@ namespace GangstaXSCPBot.Commands
             };
 
             infoEmbed.AddField("Author", "Jatc251");
-            infoEmbed.AddField("GitHub", "Coming soon");
+            infoEmbed.AddField("GitHub", "https://github.com/GangstaXwastaken/GangstaXSCPBot");
             infoEmbed.AddField("Discord", "discord.gg/tsv8xKBruP");
 
             await ctx.Channel.SendMessageAsync(embed: infoEmbed).ConfigureAwait(false);
