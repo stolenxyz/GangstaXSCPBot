@@ -1,0 +1,7 @@
+{
+  "info":  "This file need to be placed in the same folder as the executable, otherwise the program can't access it",
+  "token": "",
+  "prefix": "`",
+  "APILink": "",
+  "BotTitle": ""
+}
