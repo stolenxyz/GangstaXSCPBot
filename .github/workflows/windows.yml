@@ -43,7 +43,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: GangstaXSCPBot.Windows.tar.gz
-        path: GangstaXSCPBot/bin/Debug/netcoreapp3.1/GangstaXSCPBot.Windows.tar.gz
+        path: GangstaXSCPBot/bin/Debug/netcoreapp3.1/
       # Use always() to always run this step to publish test results when there are test failures
       if: ${{ always() }}
     
