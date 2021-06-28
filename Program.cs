@@ -13,7 +13,7 @@ namespace GangstaXSCPBot
         }
 
         /* 
-         * To get a runnable executable for Linux, run this commadn in project root directory and go to bin/release/net blah blah/publish
+         * To get a runnable executable for Linux, run this command in project root directory and go to bin\Release\net5.0\ubuntu.21.04-x64\publish
          * dotnet publish -c release -r ubuntu.21.04-x64 --self-contained
          */
 

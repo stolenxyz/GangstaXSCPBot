@@ -77,7 +77,7 @@ namespace GangstaXSCPBot
             infoToReturn[1] = numServers.ToString();
 
             // array index 0 is player list of servers, in order
-            // array index 1 is amount of server it found
+            // array index 1 is amount of servers it found
             return infoToReturn;
 
         }
