@@ -16,7 +16,7 @@ namespace GangstaXSCPBot
     {
         public DiscordClient Client { get; private set; }
         public CommandsNextExtension Commands { get; private set; }
-        public static string version = "1.0.1-dev";
+        public static string version = "1.0.2";
         public async Task RunAsync()
         {
             // Open config.json and deserialise so we can read the properties
