@@ -15,7 +15,7 @@ namespace GangstaXSCPBot
     {
         public DiscordClient Client { get; private set; }
         public CommandsNextExtension Commands { get; private set; }
-        public static string version = "1.0.0";
+        public static string version = "1.0.1";
         public async Task RunAsync()
         {
             // Open config.json and deserialise so we can read the properties
@@ -58,6 +58,7 @@ namespace GangstaXSCPBot
         private Task OnClientReady(DiscordClient client, ReadyEventArgs e)
         {
             Console.WriteLine("Client ready");
+            StatusHandler.ActivityEvery20SecondsAsync(client);
             return Task.CompletedTask;
         }
     }

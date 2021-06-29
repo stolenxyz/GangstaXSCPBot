@@ -7,6 +7,7 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Globalization;
+using DSharpPlus;
 
 namespace GangstaXSCPBot.Commands
 {
@@ -36,7 +37,7 @@ namespace GangstaXSCPBot.Commands
             using StreamWriter file = new($"PlayersServer{whichServer}.txt", append: true);
             await file.WriteLineAsync($"{playersOnServer}");
 
-            await ctx.Channel.SendMessageAsync("This command will be removed in a future update to the bot, so please consider using the players command").ConfigureAwait(false);
+            await ctx.Channel.SendMessageAsync("This command will be removed in a future update to the bot, so please consider reading the bot's staus instead.").ConfigureAwait(false);
             await ctx.Channel.SendMessageAsync($"Players on Server {whichServer}: {playersOnServer}").ConfigureAwait(false);
         }
 
@@ -67,6 +68,7 @@ namespace GangstaXSCPBot.Commands
             await fileSRV2.WriteLineAsync($"{server2Players} {DateTime.Now.ToString(culture)}");
 
             // Send message to Discord
+            await ctx.Channel.SendMessageAsync("This command will be removed in a future update to the bot, so please consider reading the bot's staus instead.").ConfigureAwait(false);
             await ctx.Channel.SendMessageAsync($"Players on Server 1: {server1Players}").ConfigureAwait(false);
             await ctx.Channel.SendMessageAsync($"Players on Server 2: {server2Players}").ConfigureAwait(false);
         }
