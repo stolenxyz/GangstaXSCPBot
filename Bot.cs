@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 using System;
 using System.IO;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace GangstaXSCPBot
@@ -58,7 +59,9 @@ namespace GangstaXSCPBot
         private Task OnClientReady(DiscordClient client, ReadyEventArgs e)
         {
             Console.WriteLine("Client ready");
-            StatusHandler.ActivityEvery20SecondsAsync(client);
+            new Thread(delegate () {
+                StatusHandler.ActivityEvery20SecondsAsync(client);
+            }).Start();
             return Task.CompletedTask;
         }
     }
