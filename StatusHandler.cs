@@ -52,7 +52,7 @@ namespace GangstaXSCPBot
                 discord.UpdateStatusAsync(activity);
 
                 Console.WriteLine(" - waiting...");
-                Thread.Sleep(15000);
+                Thread.Sleep(20000);
             }
         }
     }
