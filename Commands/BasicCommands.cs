@@ -6,11 +6,7 @@ using System;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
-using System.Globalization;
 using DSharpPlus;
-using System.ComponentModel.Design;
-using System.ComponentModel;
-using System.Runtime.InteropServices.ComTypes;
 
 namespace GangstaXSCPBot.Commands
 {
@@ -34,7 +30,11 @@ namespace GangstaXSCPBot.Commands
 
         [Command("cum")]
         [Description("cum")]
-        public async Task Cum(CommandContext cxt) => await ctx.Channel.SendMessageAsync("*cums*").ConfigureAwait(false);
+        public async Task Cum(CommandContext ctx)
+        {
+            await ctx.Channel.SendMessageAsync("*cums*").ConfigureAwait(false);
+        }
+
         [Command("info")]
         [Description("Returns information regarding the bot")]
         public async Task BotInfo(CommandContext ctx)
